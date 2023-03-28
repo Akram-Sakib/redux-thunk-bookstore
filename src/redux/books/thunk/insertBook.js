@@ -1,7 +1,8 @@
+import { BASE_URL } from "../../../constants/baseURL";
 import { addBook } from "../actions";
 
 export const insertBook = (book) => async (dispatch) => {
-  const response = await fetch("http://localhost:9000/books", {
+  const response = await fetch(`${BASE_URL}/books`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

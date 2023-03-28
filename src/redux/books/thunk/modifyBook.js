@@ -1,7 +1,8 @@
+import { BASE_URL } from "../../../constants/baseURL";
 import { updateBook } from "../actions";
 
 export const modifyBook = (book) => async (dispatch) => {
-  const response = await fetch(`http://localhost:9000/books/${book.id}`, {
+  const response = await fetch(`${BASE_URL}/books/${book.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
